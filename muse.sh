@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mkdir output
+mkdir output source_files
 
 for i in ./*.pdf; do
     qpdf --empty --pages "$i" 2-z -- "output/$i"
-    rm "$i"
+    mv "$i" "source_files/"
 done
 
 cd output
@@ -12,7 +12,8 @@ cd output
 qpdf --empty --pages *.pdf -- "the_book.pdf"
 
 mv "the_book.pdf" ../
-
 cd ..
 
-rm -r output
+zip -r -s 64 "source_files.zip" "source_files"
+
+rm -r output source_files
