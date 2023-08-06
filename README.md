@@ -20,7 +20,7 @@
 ### Пример
 
 ```
-cp muse /path/to/downloaded/chapters
+cp muse.sh /path/to/downloaded/chapters
 cd /path/to/downloaded/chapters
 chmox +x ./muse.sh
 ./muse.sh
