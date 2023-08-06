@@ -1,0 +1,4 @@
+#!/bin/bash
+
+qpdf --empty --pages "$1" 2-z -- new.pdf
+mv new.pdf "$1"
