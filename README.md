@@ -1,5 +1,20 @@
 # Скрипты и «костыли»
 
+## cutfirstpage
+
+Скрипт для удаления страницы с описанием статей (глав книг), загруженных с
+JSTOR, Project Muse и сайтов некоторых академических издательств.
+
+Для корректной работы требуется установить утилиту
+[`qpdf`](https://github.com/qpdf/qpdf).
+
+## doi2bib
+
+Скрипт формирует `bib`-файл с описанием статьи, главы или книги по DOI.
+
+Источник:
+[connermcd](https://github.com/connermcd/bin/blob/master/doi2bib).
+
 ## muse.sh
 
 Скрипт для создания книг из загруженных с сайта 
@@ -34,3 +49,4 @@ chmox +x ./muse.sh
 ## Команда для перемещения файлов из подпапок в одну папку
 
 `find Folder/ -type f -iname "*.pdf" -mindepth 1 -print0 | xargs -0 -I{} mv -n "{}" FolderB`
+
